@@ -5,11 +5,11 @@ export const CONFIG = {
   API_URL: 'https://maxisyrniki-orders.maxisyrniki.workers.dev',
 
   // Your bot's username without @ (step 1), e.g. 'maxisyrniki_bot'
-  BOT_USERNAME: '',
+  BOT_USERNAME: 'maxisyrniki_bot',
 
   // Mini App short name from @BotFather /newapp (step 5), e.g. 'shop'.
   // Then the link https://t.me/<BOT_USERNAME>/<MINI_APP_NAME> opens the shop inside Telegram.
-  MINI_APP_NAME: '',
+  MINI_APP_NAME: 'shop',
 
   // Your public Telegram channel, e.g. 'https://t.me/maxisyrniki'
   CHANNEL_URL: '',
