@@ -1,0 +1,9 @@
+{
+  "name": "maxisyrniki",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node tools/serve.mjs",
+    "test": "node worker/test.mjs"
+  }
+}

@@ -1,0 +1,19 @@
+name = "maxisyrniki-orders"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+# Site address(es) allowed to send orders, comma-separated (step 3 in README)
+ALLOWED_ORIGIN = "https://mintra-hub.github.io,http://localhost:5500"
+# Private group for order notifications, e.g. "-1001234567890" (step 2)
+ORDERS_CHAT_ID = "-5584614803"
+# Language of order notifications: ru, th or en
+NOTIFY_LANG = "ru"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "maxisyrniki"
+database_id = "PUT-DATABASE-ID-HERE"
+
+# BOT_TOKEN is a secret, NOT stored here. Set it with:
+#   npx wrangler secret put BOT_TOKEN

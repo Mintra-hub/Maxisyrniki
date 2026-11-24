@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Maxisyrniki · Order</title>
+<meta name="description" content="Maxisyrniki: real cottage cheese pancakes, cottage cheese, jams, sour cream and Greek yogurt. Order online with delivery.">
+<meta name="theme-color" content="#fcf5ea">
+<meta property="og:title" content="Maxisyrniki">
+<meta property="og:description" content="Real cottage cheese pancakes. Order online.">
+<meta property="og:image" content="img/logo.jpg">
+<link rel="icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;600;700;800&family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="./">
+      <img src="img/logo.jpg" alt="Maxisyrniki" width="48" height="48">
+      <span><b>Maxisyrniki</b><small data-t="tagline"></small></span>
+    </a>
+    <div class="lang" id="lang" role="group" aria-label="Language"></div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hello" id="hello" hidden>
+    <div>
+      <h2 id="helloTitle"></h2>
+      <p data-t="helloSub"></p>
+    </div>
+    <button class="btn ghost" id="repeatBtn" hidden data-t="repeat"></button>
+  </section>
+
+  <section class="info">
+    <span>🛵 <span data-t="delivery"></span></span>
+    <span>💵 <span data-t="payment"></span></span>
+  </section>
+
+  <section class="grid" id="products" aria-live="polite"></section>
+
+  <a class="tg-cta" id="tgCta" hidden target="_blank" rel="noopener">
+    <span class="tg-ico" aria-hidden="true">✈</span>
+    <span><b data-t="tgOpen"></b><small data-t="tgCta"></small></span>
+  </a>
+
+  <footer class="foot">
+    <a id="channelLink" hidden target="_blank" rel="noopener" data-t="channel"></a>
+    <p data-t="thanks"></p>
+  </footer>
+</main>
+
+<div class="cartbar" id="cartbar" hidden>
+  <button class="wrap cartbar-in" id="openCart">
+    <span class="cart-ico">🛒<b id="cartCount">0</b></span>
+    <span class="cart-sum" id="cartSum"></span>
+    <span class="cart-go"><span data-t="checkout"></span> →</span>
+  </button>
+</div>
+
+<div class="sheet" id="sheet" hidden>
+  <div class="backdrop" data-close></div>
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="sheetTitle">
+    <div class="grab" aria-hidden="true"></div>
+    <div class="panel-head">
+      <h2 id="sheetTitle" data-t="yourOrder"></h2>
+      <button class="x" data-close aria-label="Close">✕</button>
+    </div>
+    <div id="lines" class="lines"></div>
+    <p class="hint" id="bonusHint" hidden data-t="bonusNeedsItem"></p>
+    <form id="form" novalidate>
+      <label><span data-t="name"></span><input name="name" autocomplete="name" maxlength="80" required></label>
+      <label><span data-t="phone"></span>
+        <div class="row"><input name="phone" type="tel" autocomplete="tel" maxlength="30" required inputmode="tel">
+        <button type="button" class="btn ghost small" id="tgPhone" hidden data-t="useTgPhone"></button></div>
+      </label>
+      <label><span data-t="address"></span><textarea name="address" rows="2" maxlength="400" required data-ph="addressHint"></textarea></label>
+      <label><span><span data-t="when"></span> <i data-t="optional"></i></span><input name="when" maxlength="80" data-ph="whenHint"></label>
+      <label><span><span data-t="comment"></span> <i data-t="optional"></i></span><input name="comment" maxlength="300"></label>
+      <p class="err" id="formErr" role="alert" hidden></p>
+      <button class="btn primary big" id="submitBtn" type="submit"></button>
+      <p class="note" data-t="payment"></p>
+    </form>
+  </div>
+</div>
+
+<div class="sheet" id="done" hidden>
+  <div class="backdrop" data-close></div>
+  <div class="panel done" role="dialog" aria-modal="true">
+    <img src="img/logo.jpg" alt="" width="120" height="120">
+    <h2 data-t="doneTitle"></h2>
+    <p id="doneText"></p>
+    <p class="note" id="doneDemo" hidden data-t="doneDemo"></p>
+    <button class="btn primary big" data-close data-t="ok"></button>
+  </div>
+</div>
+
+<div class="sheet" id="gift" hidden>
+  <div class="backdrop" data-close></div>
+  <div class="panel gift" role="dialog" aria-modal="true" aria-labelledby="giftTitle">
+    <div class="gift-img"><img src="img/sour-cream.jpg" alt=""><span aria-hidden="true">🎁</span></div>
+    <h2 id="giftTitle" data-t="giftTitle"></h2>
+    <p data-t="giftText"></p>
+    <p class="note" data-t="giftNote"></p>
+    <button class="btn primary big" data-close data-t="giftOk"></button>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
