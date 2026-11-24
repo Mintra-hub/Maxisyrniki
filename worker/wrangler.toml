@@ -13,7 +13,7 @@ NOTIFY_LANG = "ru"
 [[d1_databases]]
 binding = "DB"
 database_name = "maxisyrniki"
-database_id = "PUT-DATABASE-ID-HERE"
+database_id = "50d2b7df-a341-4b49-b0e4-0547974197dd"
 
 # BOT_TOKEN is a secret, NOT stored here. Set it with:
 #   npx wrangler secret put BOT_TOKEN

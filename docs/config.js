@@ -2,7 +2,7 @@
 export const CONFIG = {
   // Address of your Cloudflare Worker (step 4). While it contains "YOUR",
   // the site runs in DEMO mode: orders are NOT sent anywhere.
-  API_URL: 'https://maxisyrniki-orders.YOUR-SUBDOMAIN.workers.dev',
+  API_URL: 'https://maxisyrniki-orders.maxisyrniki.workers.dev',
 
   // Your bot's username without @ (step 1), e.g. 'maxisyrniki_bot'
   BOT_USERNAME: '',
