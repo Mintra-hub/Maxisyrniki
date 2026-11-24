@@ -61,7 +61,7 @@ export const PRODUCTS = [
   },
   {
     id: 'yogurt',
-    price: 150,
+    price: 100,
     img: 'img/greek-yogurt.jpg',
     isNew: true,
     name: { en: 'Greek yogurt', ru: 'Греческий йогурт', th: 'กรีกโยเกิร์ต' },

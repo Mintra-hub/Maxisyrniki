@@ -98,9 +98,9 @@ assert.equal((await call('/api/order', { body: { name: 'B', phone: '+66812345678
 sent.length = 0;
 r = await call('/api/order', { ip: '7.7.7.7', body: { name: 'Y', phone: '+66812345670', address: 'a', items: [{ id: 'yogurt', qty: 1 }, { id: 'yogurt', opt: true, qty: 2 }] } });
 j = await r.json();
-assert.equal(j.total, 450, 'no-fruit yogurt costs the same');
-assert.ok(sent[0].body.text.includes('Греческий йогурт 🍓 150 г йогурта + 50 г фруктов × 1 = 150 ฿'), sent[0].body.text);
-assert.ok(sent[0].body.text.includes('Греческий йогурт 🥣 <b>БЕЗ ФРУКТОВ, 200 Г ЙОГУРТА</b> × 2 = 300 ฿'), sent[0].body.text);
+assert.equal(j.total, 300, 'no-fruit yogurt costs the same');
+assert.ok(sent[0].body.text.includes('Греческий йогурт 🍓 150 г йогурта + 50 г фруктов × 1 = 100 ฿'), sent[0].body.text);
+assert.ok(sent[0].body.text.includes('Греческий йогурт 🥣 <b>БЕЗ ФРУКТОВ, 200 Г ЙОГУРТА</b> × 2 = 200 ฿'), sent[0].body.text);
 console.log('--- yogurt lines ---\n' + sent[0].body.text.split('\n').filter((l) => l.includes('йогурт')).join('\n'));
 
 // 7. balloon gift: free, once per phone, never alone
