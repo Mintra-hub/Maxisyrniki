@@ -12,5 +12,5 @@ export const CONFIG = {
   MINI_APP_NAME: 'shop',
 
   // Your public Telegram channel, e.g. 'https://t.me/maxisyrniki'
-  CHANNEL_URL: '',
+  CHANNEL_URL: 'https://t.me/maxisyrniki',
 };
